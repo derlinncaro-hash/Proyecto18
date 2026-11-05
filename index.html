@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de repositorios de GitHub</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <main class="caja">
+        <h1>Buscador de repositorios de GitHub</h1>
+
+        <select id="lenguaje">
+            <option value="">Selecciona un lenguaje</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>TypeScript</option>
+            <option>C#</option>
+            <option>C++</option>
+            <option>PHP</option>
+            <option>Go</option>
+        </select>
+
+        <!-- Aquí salen los mensajes: vacío, cargando y error -->
+        <div id="mensaje" class="mensaje gris">Por favor selecciona un lenguaje</div>
+
+        <!-- Aquí sale el repositorio -->
+        <div id="repositorio" hidden>
+            <h2><a id="nombre" href="#" target="_blank"></a></h2>
+            <p id="descripcion"></p>
+            <p>⭐ <span id="estrellas"></span> · 🍴 <span id="forks"></span> · ⚠️ <span id="issues"></span></p>
+        </div>
+
+        <!-- Un solo botón: "Actualizar" o "Haz clic para reintentar" -->
+        <button id="boton" hidden></button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
